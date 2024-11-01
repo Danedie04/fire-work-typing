@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+:root {
+    font-size: calc(20px + (60 - 20) * (100vw - 320px) / (1280 - 320));
+}
+
+body, input {
+    color: #eef9ff;
+    font: 1em/1.5 monospace;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    background: #003153;
+    place-items: center;
+}
+
+input {
+    width: 24ch;
+    background: transparent;
+    box-shadow: 0 -1px 0 #eef9ff40 inset;
+    transition: box-shadow 0.51s linear;
+    appearance: none;
+}
+
+input:focus {
+    box-shadow: 0 -1px 0 #eef9ff inset;
+    outline: none;
+}
+
+input::placeholder {
+    color: #eef9ff40;
+}
+
+.particle {
+    position: fixed;
+    height: 1.5ch;
+    width: 1.5ch;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.particles-ring {
+    box-shadow: 0 0 0 0.125em inset;
+}
